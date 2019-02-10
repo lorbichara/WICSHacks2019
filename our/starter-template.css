@@ -1,0 +1,27 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.formElements {
+	width: 60%;
+	padding-left: 3%;
+	float: left;
+}
+
+/*.calculateElements {
+	width: 30%;
+	padding-left: 3%;
+	float: right;
+}*/
+
+.form-control {
+	width: 50%;
+}
+
+#amount {
+	width: 20%;
+}
