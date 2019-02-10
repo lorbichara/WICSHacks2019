@@ -46,12 +46,16 @@ $('#calculateButton').on('click', function(event) {
 	        let countryCurr = countryCurrency[countryCode];
 	        let statement = "json.quotes.USD" + countryCurr;
 	        let amount = $("#amount").val();
-	        let multiplication = eval(statement) * $("#amount").val();
-	        document.getElementById("exchange-rate").innerHTML= "$" + String(amount);
+	        let exRate = eval(statement);
+	        let multiplication = exRate * $("#amount").val();
+	        document.getElementById("exchange-rate-2").innerHTML = "$" + String(exRate.toFixed(2));
+
 
 	        let benDeductionFee = amount * 0.10;
 	        document.getElementById("beneficiaryDedFee").innerHTML= "$" + String(benDeductionFee);
-	        document.getElementById("amountToConvert").innerHTML= "$" + String(amount - benDeductionFee - 40);
+	        let amountToConvert = amount - benDeductionFee - 40;
+	        document.getElementById("amountToConvert").innerHTML= "$" + String(amountToConvert);
+	       	document.getElementById("amountConverted").innerHTML= "$" + String((amountToConvert * exRate).toFixed(2)); //aquíiiiihayaquihay
 	    },
 	    error: function() {
 	    	console.log("Error");

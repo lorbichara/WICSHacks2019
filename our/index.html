@@ -49,8 +49,8 @@
     <div class="container">
 
       <div class="starter-template">
-        <h1>Calculate your commission rate</h1>
-        <p class="lead">Want to send money abroad?<br> Use this tool to calculate ...</p>
+        <h1>Calculate your commission fees</h1>
+        <p class="lead">Want to send money abroad?<br> Use this tool to calculate commission fees.</p>
       </div>
     </div><!-- /.container -->
 
@@ -61,26 +61,29 @@
         <input type="text" class="form-control" id="originBank" placeholder="Capital One" readonly/>
       </div>
       <br>
+      <br>
 
       <div class="container">
         <label for="destinationBank">Destination Bank</label>
         <input type="text" class="form-control" id="destinationBank"/>
       </div>
-      <br>
 
-      <div class="container">
+      <br>
+<br>
+      <!-- <div class="container">
         <label for="destCurr">Destination Currency</label>
         <input type="text" class="form-control" id="destCurr"/>
       </div>
-      <br>
+      <br> -->
 
       <div class="container">
-        <label for="destCountry">Desination Country</label>
+        <label for="destCountry">Destination Country</label>
         <br>
         <!-- <input type="text" class="form-control" id="destCountry"/> -->
         <select id="destinationCountry">
         </select>
       </div>
+      <br>
       <br>
 
       <div class="container">
@@ -88,18 +91,19 @@
         <input type="number" class="form-control" id="amount"/>
       </div>
       <br>
+      <br>
 
       <div class="container">
-        <input type="submit" id="calculateButton" name="calculateRate" value="calculate Rate">
+        <input type="submit" id="calculateButton" name="calculateRate" value="Calculate Rate" class="btn btn-light">
       </div>    
     </form>
     </div>
 
     <div class="calculateElements">
       <div class="col-md-4 order-md-2 mb-4">
-          <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <!-- <h4 class="d-flex justify-content-between align-items-center mb-3">
             <span class="text-muted">Calculation</span>
-          </h4>
+          </h4> -->
           <ul class="list-group mb-3">
             <li class="list-group-item d-flex justify-content-between lh-condensed">
               <div>
@@ -118,7 +122,7 @@
             <li class="list-group-item d-flex justify-content-between lh-condensed">
               <div>
                 <h6 class="my-0">Beneficiary Deduction Fee</h6>
-                <small class="text-muted">Fee charged by intermediary banks to cover processing costs<br>(This amount is an estimate and will be charged once the transaction has been completed)</small>
+                <small class="text-muted">Fee charged by intermediary and recipient banks to cover processing costs<br>(This amount is an estimate and will be charged once the transaction has been completed)</small>
               </div>
               <span class="text-muted" id="beneficiaryDedFee"></span>
             </li>
@@ -128,6 +132,38 @@
               <br>
               <span class="text-muted" id="amountToConvert"></span>
             </li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="showExchange">
+      <div class="col-md-4 order-md-2 mb-4">
+          <ul class="list-group mb-3">
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Exchange Rate</h6>
+              </div>
+              <span class="text-muted" id="exchange-rate-2"></span>
+            </li>
+<!--             <li class="list-group-item d-flex justify-content-between lh-condensed">
+              <div>
+                <h6 class="my-0">Amount converted to local currency</h6>
+                <small class="text-muted">Fee charged by intermediary banks to cover processing costs<br>(This amount is an estimate and will be charged once the transaction has been completed)</small>
+              </div>
+              <span class="text-muted" id="amountConverted"></span>
+            </li> -->
+
+            <li class="list-group-item d-flex justify-content-between">
+              <span>Amount converted to local currency</span>
+              <br>
+              <span class="text-muted" id="amountConverted"></span>
+            </li>
+
+            <!-- <li class="list-group-item d-flex justify-content-between">
+              <span>Total amount to convert</span>
+              <br>
+              <span class="text-muted" id="amountToConvert"></span>
+            </li> -->
           </ul>
         </div>
     </div>
